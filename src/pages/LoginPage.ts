@@ -8,7 +8,7 @@ private readonly emailId: Locator;
 private readonly password: Locator;
 private readonly loginBtn: Locator;
 private readonly forgottenPasswordLink: Locator;
-private readonly logo: Locator;
+// private readonly logo: Locator;
 private readonly loginErrorMessage: Locator;
 
 // Constructor of the class and initialise the Locators
@@ -18,7 +18,7 @@ constructor(page:Page){
     this.password = page.getByRole('textbox',{name: 'password'}); 
     this.loginBtn = page.getByRole('button',{name:'Login'}); 
     this.forgottenPasswordLink = page.getByRole('link', {name: 'Forgotten Password'}).first();
-    this.logo = page.getByAltText('naveenopencart');
+    // this.logo = page.getByAltText('naveenopencart');
     this.loginErrorMessage= page.locator('.alert.alert-danger.alert-dismissible');
 }
 

@@ -42,6 +42,10 @@ export let test = baseTest.extend<pageFixtures>({
     await use(productInfoPage);
 },
 
+searchResultsPage: async ({ page }, use) => {
+  await use(new SearchResultsPage(page));
+},
+
 testData: async({}, use)=>{
 let testData =  CsvHelper.readCsv('src/data/loginData.csv');
 await use(testData);
