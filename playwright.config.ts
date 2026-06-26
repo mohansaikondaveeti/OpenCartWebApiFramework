@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 const ENV=process.env.ENV ||"qa";
 dotenv.config({path:`config/.env.${ENV}`});
 // console.log("ENV =", ENV);
-// console.log("USERNAME =", process.env.EMAIL);
+// console.log("USERNAME =", process.env.APP_USERNAME);
 // console.log("PASSWORD =", process.env.PASSWORD);
 
 
