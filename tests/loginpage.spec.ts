@@ -21,7 +21,7 @@ import { JsonHelper } from "../src/utils/JsonHelper";
     });
 
     test("User able to Login", async({loginPage, homePage})=>{
-        await loginPage.doLogin(process.env.EMAIL!, process.env.PASSWORD!);
+        await loginPage.doLogin(process.env.APP_USERNAME!, process.env.PASSWORD!);
       expect.soft(await homePage.isLogoutLinkExists()).toBeTruthy();
       expect.soft(await homePage.getPageTitle()).toBe('My Account');
     });

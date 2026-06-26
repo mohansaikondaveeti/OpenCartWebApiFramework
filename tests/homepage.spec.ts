@@ -4,7 +4,7 @@
 
    test.beforeEach(async({loginPage})=>{
     await loginPage.goToLoginPage();
-    await loginPage.doLogin(process.env.EMAIL!, process.env.PASSWORD!);
+    await loginPage.doLogin(process.env.APP_USERNAME!, process.env.PASSWORD!);
     
 })
 
