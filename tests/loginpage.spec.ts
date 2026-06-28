@@ -11,7 +11,7 @@ import { JsonHelper } from "../src/utils/JsonHelper";
    
 });
 
-    test("login page title test", async ({loginPage})=>{
+    test("@smoke login page title test", async ({loginPage})=>{
       const pageTitle = await loginPage.getPageTitle();
     expect(pageTitle).toBe('Account Login');
     });
@@ -20,7 +20,7 @@ import { JsonHelper } from "../src/utils/JsonHelper";
     expect(await loginPage.isForgotPasswordLinkExists()).toBeTruthy();
     });
 
-    test("User able to Login", async({loginPage, homePage})=>{
+    test("@smoke User able to Login", async({loginPage, homePage})=>{
         await loginPage.doLogin(process.env.APP_USERNAME!, process.env.PASSWORD!);
       expect.soft(await homePage.isLogoutLinkExists()).toBeTruthy();
       expect.soft(await homePage.getPageTitle()).toBe('My Account');

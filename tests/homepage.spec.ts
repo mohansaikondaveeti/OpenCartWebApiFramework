@@ -13,7 +13,7 @@ test('Home Page Title Test', async({homePage})=>{
     expect(HomePageTitle).toBe('My Account'); 
 })
 
-test('Home Page Headers Test', async({homePage})=>{
+test('@smoke Home Page Headers Test', async({homePage})=>{
    let allHeaders =await homePage.getHomePageHeaders();
    expect(allHeaders).toHaveLength(4);
    expect(allHeaders).toEqual(['My Account','My Orders','My Affiliate Account', 'Newsletter'])

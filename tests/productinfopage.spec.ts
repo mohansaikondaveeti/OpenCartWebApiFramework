@@ -5,7 +5,7 @@ test.beforeEach(async ({ loginPage }) => {
     await loginPage.doLogin(process.env.APP_USERNAME!, process.env.PASSWORD!);
 });
 
-test('verify product images count', async ({ homePage, searchResultsPage, productInfoPage }) => {
+test('@smoke verify product images count', async ({ homePage, searchResultsPage, productInfoPage }) => {
     await homePage.doSearch('macbook');
     await searchResultsPage.selectTheProduct('MacBook Pro');
 

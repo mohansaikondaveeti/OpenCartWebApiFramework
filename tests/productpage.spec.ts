@@ -8,11 +8,11 @@ test.beforeEach(async ({ loginPage }) => {
 });
 
 
-test('comp logo exists on product page', async ({ basePage }) => {
+test('@smoke comp logo exists on product page', async ({ basePage }) => {
     expect(await basePage.isLogoVisible()).toBeTruthy();
 });
 
-test('footers exist on product page', async ({ basePage }) => {
+test('@smoke footers exist on product page', async ({ basePage }) => {
     expect(await basePage.getPageFootersCount()).toBe(16);
 });
 
