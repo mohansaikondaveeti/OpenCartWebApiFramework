@@ -33,7 +33,7 @@ pipeline {
     }
 
     environment {
-        SLACK_CHANNEL = '#general'
+        SLACK_CHANNEL = '#social'
     }
 
     options {
